@@ -3,11 +3,11 @@
 }
 
 <ul id="piano">
-    <li data-note="C4" class="key two" id="2">
-        <div data-note="C#4" class="black-key">2</div>
+    <li data-note="C4" class="key letter" id="q">
+        <div data-note="C#4" class="black-key letter" id="2">2</div>
         Q
     </li>
-    <li data-note="D4" class="key">
+    <li data-note="D4" class="key letter">
         <div data-note="D#4" class="black-key">3</div>
         W
     </li>
@@ -69,6 +69,6 @@
     });
 
     $(document).keyup(function () {
-        $(".two").removeClass('red');
+        $(".letter").removeClass('red');
     });
 </script>
