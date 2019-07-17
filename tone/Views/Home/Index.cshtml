@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<ul id="piano">
+    <li data-note="C4" class="key two" id="2">
+        <div data-note="C#4" class="black-key">2</div>
+        Q
+    </li>
+    <li data-note="D4" class="key">
+        <div data-note="D#4" class="black-key">3</div>
+        W
+    </li>
+    <li data-note="E4" class="key">
+        E
+    </li>
+    <li data-note="F4" class="key">
+        <div data-note="F#4" class="black-key">5</div>
+        R
+    </li>
+    <li data-note="G4" class="key">
+        <div data-note="G#4" class="black-key">6</div>
+        T
+    </li>
+    <li data-note="A4" class="key">
+        <div data-note="A#4" class="black-key">7</div>
+        Y
+    </li>
+    <li data-note="B4" class="key">
+        U
+    </li>
+
+
+    <li data-note="C5" class="key">
+        <div data-note="C#5" class="black-key">H</div>
+        B
+    </li>
+    <li data-note="D5" class="key">
+        <div data-note="D#5" class="black-key">J</div>
+        N
+    </li>
+    <li data-note="E5" class="key">
+        M
+    </li>
+    <li data-note="F5" class="key">
+        <div data-note="F#5" class="black-key">L</div>
+        ,
+    </li>
+    <li data-note="G5" class="key">
+        <div data-note="G#5" class="black-key">;</div>
+        .
+    </li>
+    <li data-note="A5" class="key">
+        <div data-note="A#5" class="black-key">'</div>
+        /
+    </li>
+    <li data-note="B5" class="key">
+        [SHIFT]
+    </li>
+</ul>
+
+<script type="text/javascript">
+    $(document).keypress(function (e) {
+
+        var which_letter = String.fromCharCode(e.which).toLowerCase();
+        $('#' + which_letter + '').addClass('red');
+        console.log(which_letter);
+        
+    });
+
+    $(document).keyup(function () {
+        $(".two").removeClass('red');
+    });
+</script>
