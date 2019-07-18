@@ -20,56 +20,56 @@ piano.addEventListener("mouseup", e => {
 // handles keyboard events
 document.addEventListener("keydown", e => {
     // e object has the key property to tell which key was pressed
-    switch (e.key) {
-        case "q":
+    switch (e.which) {
+        case 81:
             return synth.triggerAttack("C4");
-        case "2":
+        case 50:
             return synth.triggerAttack("C#4");
-        case "w":
+        case 87:
             return synth.triggerAttack("D4");
-        case "3":
+        case 51:
             return synth.triggerAttack("D#4");
-        case "e":
+        case 69:
             return synth.triggerAttack("E4");
-        case "r":
+        case 82:
             return synth.triggerAttack("F4");
-        case "5":
+        case 53:
             return synth.triggerAttack("F#4");
-        case "t":
+        case 84:
             return synth.triggerAttack("G4");
-        case "6":
+        case 54:
             return synth.triggerAttack("G#4");
-        case "y":
+        case 89:
             return synth.triggerAttack("A4");
-        case "7":
+        case 55:
             return synth.triggerAttack("A#4");
-        case "u":
+        case 85:
             return synth.triggerAttack("B4");
 
 
-        case "b":
+        case 66:
             return synth.triggerAttack("C5");
-        case "h":
+        case 72:
             return synth.triggerAttack("C#5");
-        case "n":
+        case 78:
             return synth.triggerAttack("D5");
-        case "j":
+        case 74:
             return synth.triggerAttack("D#5");
-        case "m":
+        case 77:
             return synth.triggerAttack("E5");
-        case ",":
+        case 188:
             return synth.triggerAttack("F5");
-        case "l":
+        case 76:
             return synth.triggerAttack("F#5");
-        case ".":
+        case 190:
             return synth.triggerAttack("G5");
-        case ";":
+        case 186:
             return synth.triggerAttack("G#5");
-        case "/":
+        case 191:
             return synth.triggerAttack("A5");
-        case "'":
+        case 222:
             return synth.triggerAttack("A#5");
-        case "event.shiftKey":
+        case 16:
             return synth.triggerAttack("B5");
         default:
             return;
@@ -77,30 +77,31 @@ document.addEventListener("keydown", e => {
 });
 // when the key is released, audio is released as well
 document.addEventListener("keyup", e => {
-    switch (e.key) {
-        case "q":
-        case "2":
-        case "w":
-        case "3":
-        case "e":
-        case "5":
-        case "t":
-        case "6":
-        case "y":
-        case "7":
-        case "u":
-        case "r":
-        case "b":
-        case "h":
-        case "n":
-        case "j":
-        case "m":
-        case ",":
-        case "l":
-        case ".":
-        case ";":
-        case "/":
-        case "'":
+    switch (e.which) {
+        case 81:
+        case 50:
+        case 87:
+        case 51:
+        case 69:
+        case 82:
+        case 53:
+        case 84:
+        case 54:
+        case 89:
+        case 55:
+        case 85:
+        case 66:
+        case 72:
+        case 78:
+        case 74:
+        case 77:
+        case 188:
+        case 76:
+        case 190:
+        case 186:
+        case 191:
+        case 222:
+        case 16:
             synth.triggerRelease();
     }
 });
